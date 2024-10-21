@@ -2,7 +2,6 @@
 import HomeIcon from '@heroicons/react/24/outline/HomeIcon';
 import Squares2X2Icon from '@heroicons/react/24/outline/Squares2X2Icon';
 const iconClasses = `h-6 w-6`
-const submenuIconClasses = `h-5 w-5`
 
 const routes = [
 

@@ -2,7 +2,6 @@ import React, { lazy, useEffect } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { themeChange } from 'theme-change';
 import './App.css';
-import checkAuth from './app/auth';
 import initializeApp from './app/init';
 
 // Importing pages
@@ -13,7 +12,7 @@ initializeApp()
 
 
 // Check for login and initialize axios
-const token = checkAuth()
+// const token = checkAuth()
 
 
 function App() {
@@ -32,7 +31,8 @@ function App() {
           {/* Place new routes over this */}
           <Route path="/app/*" element={<Layout />} />
 
-          <Route path="*" element={<Navigate to={token ? "/app/welcome" : "/login"} replace />}/>
+          {/* <Route path="*" element={<Navigate to={token ? "/app/welcome" : "/login"} replace />}/> */}
+          <Route path="*" element={<Navigate to="/app/menus" replace />}/>
 
         </Routes>
       </Router>
