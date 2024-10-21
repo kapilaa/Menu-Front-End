@@ -1,6 +1,3 @@
-import AmountStats from './components/AmountStats'
-import DashboardStats from './components/DashboardStats'
-import PageStats from './components/PageStats'
 
 import CircleStackIcon from '@heroicons/react/24/outline/CircleStackIcon'
 import CreditCardIcon from '@heroicons/react/24/outline/CreditCardIcon'
@@ -8,11 +5,7 @@ import UserGroupIcon from '@heroicons/react/24/outline/UserGroupIcon'
 import UsersIcon from '@heroicons/react/24/outline/UsersIcon'
 import { useDispatch } from 'react-redux'
 import { showNotification } from '../common/headerSlice'
-import BarChart from './components/BarChart'
 import DashboardTopBar from './components/DashboardTopBar'
-import LineChart from './components/LineChart'
-import DoughnutChart from './components/MenuForm'
-import UserChannels from './components/MenuPage'
 
 const statsData = [
     {title : "New Users", value : "34.7k", icon : <UserGroupIcon className='w-8 h-8'/>, description : "↗︎ 2300 (22%)"},
@@ -40,36 +33,30 @@ function Dashboard(){
         
         {/** ---------------------- Different stats content 1 ------------------------- */}
             <div className="grid lg:grid-cols-4 mt-2 md:grid-cols-2 grid-cols-1 gap-6">
-                {
-                    statsData.map((d, k) => {
-                        return (
-                            <DashboardStats key={k} {...d} colorIndex={k}/>
-                        )
-                    })
-                }
+               <h1>Menu Managment</h1>
             </div>
 
 
 
         {/** ---------------------- Different charts ------------------------- */}
-            <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
+            {/* <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
                 <LineChart />
                 <BarChart />
-            </div>
+            </div> */}
             
         {/** ---------------------- Different stats content 2 ------------------------- */}
         
-            <div className="grid lg:grid-cols-2 mt-10 grid-cols-1 gap-6">
+            {/* <div className="grid lg:grid-cols-2 mt-10 grid-cols-1 gap-6">
                 <AmountStats />
                 <PageStats />
-            </div>
+            </div> */}
 
         {/** ---------------------- User source channels table  ------------------------- */}
         
-            <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
+            {/* <div className="grid lg:grid-cols-2 mt-4 grid-cols-1 gap-6">
                 <UserChannels />
                 <DoughnutChart />
-            </div>
+            </div> */}
         </>
     )
 }
