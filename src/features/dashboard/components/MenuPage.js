@@ -70,7 +70,7 @@ function MenuPage(){
       </div>
       
         </TitleCard>
-       {status==true?<RightBox fieldData={dataForm} /> :null}
+       <RightBox fieldData={dataForm} /> 
           </>
     )
 }

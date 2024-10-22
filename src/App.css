@@ -37,7 +37,7 @@
   }
 }
 .menu{
-  background-color: #bbbbbb;
+  background-color: #101828;
 }
 
 .button-expand{
@@ -46,6 +46,7 @@
 
 .logo-title{
   align-items: center;
+  color: white;
 }
 
 :root {
@@ -77,16 +78,12 @@
 
 .branch-node::before, .branches > ::before {
   content: "";
-  
   position: absolute;
-  
-  left: -0.5rem;
-  top: 1.5rem;
-  
+  left: 0.5rem;
+  top: 1.4rem;
   width: 3rem;
-  
-  border-left: 2px solid black;
-  border-top: 2px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .branch-node:not(:last-child)::before, .branches > :not(:last-child)::before {
@@ -95,20 +92,16 @@
 
 .branch-node:last-child::before, .branches > :last-child::before {
   border-top: 0;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
 :not(.tree-view) > .branch-node:first-child::after, .branches > :first-child::after {
   content: "";
-  
   position: absolute;
-  
-  left: -0.5rem;
-  top: -1.5rem;
-  
-  height: 3rem;
-  
-  border-left: 2px solid black;
+  left: 5px;
+  top: -16px;
+  height: 2.6rem;
+  border-left: 1px solid black;
 }
 
 .branch-title {
@@ -127,17 +120,15 @@
 }
 
 .branch-title::before {
-  content: "►";
-  
-  position: absolute;
-  
-  left: 1rem;
-  
-  margin-right: 1rem;    
+    content: "⌄";
+    position: absolute;
+    top: -6px;
+    left: 1.9rem;
+    margin-right: 1rem;
 }
 
 .branch-node.open > .branch-title::before {
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
 }
 
 .branch-node.open > .branches {
@@ -166,4 +157,15 @@
   
   margin-left: 2rem;
   padding-left: 3rem;
+}
+ul>li>.bg-base-200{
+  background-color: #9ff443;
+}
+
+.font-normal{
+  color: #aea9a9  !important;
+}
+.menu>li>a:hover{
+   
+  background-color: aliceblue !important;
 }
